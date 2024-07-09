@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Voice to AR Image Generator</title>
+    <script src="https://aframe.io/releases/1.2.0/aframe.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aframe-ar/1.8.2/aframe-ar.min.js"></script>
+    <script src="https://unpkg.com/aframe-look-at-component@0.8.0/dist/aframe-look-at-component.min.js"></script>
+    <script src="https://unpkg.com/aframe-gps-component/dist/aframe-gps-component.min.js"></script>
+    
+    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script> -->
+    <script src="https://cdn.rawgit.com/jeromeetienne/AR.js/3.3.2/aframe/build/aframe-ar-nft.js"></script>
+    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/aframe/1.2.0/aframe.min.js"></script>  -->
+     <script src="https://jeromeetienne.github.io/AR.js/aframe/build/aframe-ar.js"></script> 
+     <script src="https://rawgit.com/donmccurdy/aframe-extras/master/dist/aframe-extras.loaders.min.js"></script>
+</head>
+<body style="margin: 0px; overflow: hidden;">
+    <a-scene embedded vr-mode-ui="enabled: false" renderer="logarithmicDepthBuffer: true;">
+        <a-entity gps-entity-place id="generated-image" latitude="0" longitude="0"></a-entity>
+        <a-camera gps-camera rotation-reader></a-camera>
+    </a-scene>
+    <div style="position: absolute; top: 10px; left: 10px; background: white; padding: 10px; border-radius: 5px;">
+        <button onclick="startRecognition()">Start Voice Recognition</button>
+        <p id="recognized-text"></p>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
+
+
+<!-- <!DOCTYPE html>
+<html>
+<head>
+    <title>Voice to AR Image Generator</title>
+    <script src="https://aframe.io/releases/1.2.0/aframe.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aframe-ar/1.8.2/aframe-ar.min.js"></script>
+    <script src="https://unpkg.com/aframe-look-at-component@0.8.0/dist/aframe-look-at-component.min.js"></script>
+    <script src="https://unpkg.com/aframe-gps-component/dist/aframe-gps-component.min.js"></script>
+</head>
+<body style="margin: 0px; overflow: hidden;">
+    <a-scene embedded vr-mode-ui="enabled: false" renderer="logarithmicDepthBuffer: true;">
+        <a-entity gps-entity-place id="generated-image" latitude="0" longitude="0"></a-entity>
+        <a-camera gps-camera rotation-reader></a-camera>
+    </a-scene>
+    <div style="position: absolute; top: 10px; left: 10px; background: white; padding: 10px; border-radius: 5px;">
+        <button onclick="startRecognition()">Start Voice Recognition</button>
+        <p id="recognized-text"></p>
+    </div>
+</body>
+</html> -->

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Markerless AR with Voice Control</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+    <script src="https://cdn.rawgit.com/jeromeetienne/AR.js/3.3.2/aframe/build/aframe-ar-nft.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aframe/1.2.0/aframe.min.js"></script>
+    <script src="https://jeromeetienne.github.io/AR.js/aframe/build/aframe-ar.js"></script>
+    <script src="https://rawgit.com/donmccurdy/aframe-extras/master/dist/aframe-extras.loaders.min.js"></script>
+  </head>
+  <body style="margin: 0; overflow: hidden">
+    <button
+      id="start-recognition"
+      style="position: absolute; top: 10px; left: 10px; z-index: 100"
+    >
+      Start Speaking
+    </button>
+    <div
+      id="transcript"
+      style="
+        position: absolute;
+        top: 50px;
+        left: 10px;
+        z-index: 100;
+        color: white;
+        background: rgba(0, 0, 0, 0.5);
+        padding: 5px;
+        border-radius: 5px;
+      "
+    ></div>
+<!--     <a-scene embedded arjs="trackingMethod: best;">
+      <a-entity camera></a-entity>
+      <a-entity
+        id="dynamic-model"
+        scale="0.5 0.5 0.5"
+                position="0 0.347 -4" rotation="0 60 -1"
+      ></a-entity>
+    </a-scene> -->
+      <a-scene embedded arjs="trackingMethod: best;">
+        <a-entity camera></a-entity>
+        <a-entity id="dynamic-model" scale="0.05 0.05 0.05"
+                position="0 -0.5 -4" rotation="0 30 0" animation-mixer="loop: repeat"></a-entity>
+    </a-scene>
+    <script src="script.js"></script>
+  </body>
+</html>
